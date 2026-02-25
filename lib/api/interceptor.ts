@@ -1,6 +1,12 @@
 // baseurl
 import { BASE_URL } from "@/constant/constants";
 
+if (!BASE_URL || BASE_URL === "undefined") {
+  throw new Error(
+    "BASE_URL is not configured. Add NEXT_PUBLIC_BASE_URL to environment variables.",
+  );
+}
+
 // custom error class
 export class ApiError extends Error {
   constructor(
