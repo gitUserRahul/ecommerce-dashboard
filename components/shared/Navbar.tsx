@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaUser } from "react-icons/fa";
 import { FaCartPlus } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 
