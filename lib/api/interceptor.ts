@@ -39,6 +39,7 @@ export async function fetchClient<T>(
       ...fetchOptions,
       headers: {
         "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (compatible; YourAppName/1.0)",
         ...fetchOptions.headers,
       },
       signal: controller.signal,
