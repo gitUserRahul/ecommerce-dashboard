@@ -18,7 +18,7 @@ const page = async ({ searchParams }: Isortprops) => {
   const { sort = "asc" } = await searchParams;
   const [products, categories] = await Promise.all([
     ProductService.getAllProduct(sort),
-    ProductService.getProductByCategory(),
+    ProductService.getCategories(),
   ]);
 
   return (
