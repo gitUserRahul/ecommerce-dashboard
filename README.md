@@ -1,41 +1,147 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce Dashboard
 
-## Getting Started
+  E-commerce Dashboard built with Next.js 16 and TypeScript, featuring dynamic product browsing, cart management, and seamless integration with the FakeStore API.
 
-First, run the development server:
+## Live Demo:
+
+  https://ecommerce-dashboard-dbbnghzz8-gituserrahuls-projects.vercel.app/products
+
+## Tech Stack
+
+Framework: Next.js 16 (App Router)  
+Language: TypeScript
+Styling: Tailwind CSS
+State Management: Zustand
+
+## API Integration: 
+
+  FakeStore API
+
+## Deployment:
+
+  Vercel
+
+## Features:
+
+  - Fetch and display products from FakeStore API 
+  - Dynamic product listing page (/products) 
+  - Add to Cart functionality 
+  - Real-time cart state management 
+  - Responsive UI 
+  - Type-safe development with TypeScript 
+  - Optimized routing using Next.js App Router 
+  - Persistent cart using localStorage 
+  - Product filtering by category, price range & search 
+
+## Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+ecommerce-dashboard/
+├── app/                     
+│   ├── cart/                
+│   │   └── page.tsx
+│   ├── products/
+│   │   ├──  [id]/            
+│   │   │  ├── page.tsx        
+│   │   │  └── error.tsx      
+│   │   ├── page.tsx           
+│   │   ├── loading.tsx        
+│   │   └── error.tsx           
+│   ├── layout.tsx             
+│   ├── globals.css            
+│   └── page.tsx               
+├── components/             
+│   ├── products/           
+│   ├── cart/                
+│   ├── shared/             
+│   └── ui/                 
+├── lib/                    
+│   ├── api/                
+│   ├── utils/              
+│   └── metadata/            
+├── store/                   
+│   └── cartStore.ts         
+├── types/                   
+│   ├── cart.types.ts        
+│   └── product.types.ts     
+├── hook/
+    └── useAddToCart.ts                    
+├── constant/
+    └── constants.ts           
+
+
 ```
+ 
+## Getting Started
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  1. Clone the Repository 
+  
+```bash
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+git clone https://github.com/your-username/ecommerce-dashboard.git
+cd ecommerce-dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+  2. Install Dependencies 
+  
+    npm install 
+  3. Run Development Server 
+  
+    npm run dev 
+    
+  4. Visit 
+  
+    http://localhost:3000/products
 
-## Learn More
+### API Integration:
+  This project uses the FakeStore API to fetch product data:
 
-To learn more about Next.js, take a look at the following resources:
+## Products Endpoint:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://fakestoreapi.com/products
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Data is fetched using async/await inside Server Components.
 
-## Deploy on Vercel
+## Core Functionality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  - Product Listing
+  - Fetches products dynamically from FakeStore API.
+  - Displays title, price, category, rating and image.
+  - Cart Management
+  - Add products to cart.
+  - Prevent duplicate cart entries.
+  - Update cart quantity.
+  - Calculate total price dynamically.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# ecommerce-dashboard
-E-commerce dashboard built with Next.js 16 and TypeScript, featuring real-time cart management, product browsing, and seamless integration with the FakeStore API for dynamic product data.
->>>>>>> cd1e5509efd93cb272abee14bcbe3ca95dbfb1f8
+## Deployment: 
+
+  The application is deployed on Vercel
+  
+  Live URL:
+  
+  https://ecommerce-dashboard-dbbnghzz8-gituserrahuls-projects.vercel.app/products
+
+## To deploy your own:
+
+  vercel
+
+  
+### Learnings & Implementation Highlights
+
+  - Leveraged Next.js App Router for structured routing.
+  - Used TypeScript for improved developer experience and scalability.
+  - Implemented reusable UI components.
+  - Maintained separation of concerns between API logic and UI components.
+  - Followed clean folder structure for scalability.
+
+## Future Improvements
+
+  - Authentication (JWT / NextAuth)
+  - Unit and  integration testing
+
+## Author
+
+  Rahul Chaudhary
+  
+  Frontend Developer | Next.js & TypeScript | React
