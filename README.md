@@ -10,7 +10,7 @@
 
 Framework: Next.js 16 (App Router)  
 Language: TypeScript
-Styling: Tailwind CSS
+Styling: Tailwind CSS <br />
 State Management: Zustand
 
 ## API Integration: 
