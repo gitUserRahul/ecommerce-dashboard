@@ -9,7 +9,7 @@
 ## Tech Stack
 
 Framework: Next.js 16 (App Router)  
-Language: TypeScript
+Language: TypeScript <br />
 Styling: Tailwind CSS <br />
 State Management: Zustand
 
